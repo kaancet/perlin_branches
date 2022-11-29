@@ -39,7 +39,8 @@ def setup():
                    length=np.random.randint(4,7)*100,
                    direction=-1 if o[1] == 0 else 1,
                    orientation='vertical',
-                   n=n,
+                   mode='fixed_count',
+                   mode_n=n,
                    branchiness=np.random.randint(30,100))
         b.make_leaves(length_min=30,length_max=80)
         b.make_color_gradient(c1=[np.random.randint(0,360), np.random.randint(0,100), np.random.randint(0,100)],
@@ -56,7 +57,8 @@ def setup():
                    length=np.random.randint(4,7)*100,
                    direction=1 if o[0] == 0 else -1,
                    orientation='horizontal',
-                   n=n,
+                   mode='fixed_count',
+                   mode_n=n,
                    branchiness=np.random.randint(30,100))
         b.make_leaves(length_min=30,length_max=80)
         b.make_color_gradient(c1=[np.random.randint(0,360), np.random.randint(0,100), np.random.randint(0,100)],
