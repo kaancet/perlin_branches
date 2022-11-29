@@ -23,7 +23,9 @@ def create_branches():
         
 def setup():
     global w,h,orientation,branches
+    
     py5.size(w, h, py5.P2D)
+    # time.sleep(6)
     py5.frame_rate(60)
     py5.stroke_weight(8)
     py5.color_mode(py5.HSB,360,100,100,100)
@@ -41,7 +43,7 @@ def setup():
                    orientation='vertical',
                    mode='fixed_count',
                    mode_n=n,
-                   branchiness=np.random.randint(30,100))
+                   branchiness=np.random.randint(100,200))
         b.make_leaves(length_min=30,length_max=80)
         b.make_color_gradient(c1=[np.random.randint(0,360), np.random.randint(0,100), np.random.randint(0,100)],
                               c2=[np.random.randint(0,360), np.random.randint(0,100), np.random.randint(0,100)])
